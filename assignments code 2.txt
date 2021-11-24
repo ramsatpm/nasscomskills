@@ -1,0 +1,90 @@
+Two Dimensional Lists:
+*********************
+q1:
+def rowWiseSum(mat, nRows, mCols):
+    for row in mat:
+        sum=0
+        for ele in row:
+            sum = sum + ele
+        print(sum,end = ' ')
+
+q2:
+def sum_list(li):
+    sum = 0
+    for i in li:
+        sum = sum+i
+    return sum
+
+def findLargest(arr, nRows, mCols):   
+    if nRows == 0 and mCols == 0:
+        print("row "+str(0)+" "+str(MIN_VALUE))
+        return
+    rsum=[]
+    for i in range(nRows):
+        rsum.append(sum_list(arr[i]))
+    max_rsum = max(rsum)
+    max_rsum_ind = rsum.index(max_rsum)
+    csum=[]
+    for j in range(mCols):
+        col=[]
+        for ele in arr:
+            col.append(ele[j])
+        csum.append(sum_list(col))
+    max_csum = max(csum)
+    max_csum_ind = csum.index(max_csum)
+    if max_rsum >= max_csum:
+        print("row "+str(max_rsum_ind)+" "+str(max_rsum))
+    else:
+        print("column "+str(max_csum_ind)+" "+str(max_csum))
+
+q3:
+def wavePrint(mat, nRows, mCols):
+    out_list=[]
+    for j in range(mCols):
+        if j%2 == 0:
+            for i in range(0,nRows):
+                out_list.append(mat[i][j])
+        else:
+            for i in range(nRows-1,-1,-1):
+                out_list.append(mat[i][j])
+    print(" ".join([str(i) for i in out_list]))
+
+q4:
+def spiralPrint(mat, nRows, mCols):
+    k=0
+    l=0
+    m=nRows
+    n=mCols
+    a=mat
+    while (k < m and l < n) : 
+          
+        # Print the first row from 
+        # the remaining rows  
+        for i in range(l, n) : 
+            print(a[k][i], end = " ") 
+              
+        k += 1
+  
+        # Print the last column from 
+        # the remaining columns  
+        for i in range(k, m) : 
+            print(a[i][n - 1], end = " ") 
+              
+        n -= 1
+  
+        # Print the last row from 
+        # the remaining rows  
+        if ( k < m) : 
+              
+            for i in range(n - 1, (l - 1), -1) : 
+                print(a[m - 1][i], end = " ") 
+              
+            m -= 1
+          
+        # Print the first column from 
+        # the remaining columns  
+        if (l < n) : 
+            for i in range(m - 1, k - 1, -1) : 
+                print(a[i][l], end = " ") 
+              
+            l += 1
