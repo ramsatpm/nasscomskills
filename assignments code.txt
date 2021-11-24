@@ -1,0 +1,907 @@
+Loops:
+a1:
+while True:
+    n = int(input())
+    if n==1:
+        i=int(input())
+        j=int(input())
+        print((i+j))
+    elif n == 2:
+        i = int(input())
+        j = int(input())
+        print((i-j))
+    elif n == 3:
+        i = int(input())
+        j = int(input())
+        print((i*j))
+    elif n == 4:
+        i = int(input())
+        j = int(input())
+        print((i//j))
+    elif n == 5:
+        i = int(input())
+        j = int(input())
+        print((i%j))
+    elif n==6:
+        break
+    else:
+        print("Invalid Operation")
+a2:
+n = int(input())
+rev = 0
+while n>0:
+    rev = rev * 10 + n % 10
+    n = n//10
+print(rev)
+a3:
+def checkPalindrome(num):
+    rev = 0
+    numc = num
+    while num > 0:
+        rev = rev * 10 + num % 10
+        num = num // 10
+    if numc == rev:
+        return True
+    else:
+        return False
+
+		
+num = int(input())
+isPalindrome = checkPalindrome(num)
+if(isPalindrome):
+	print('true')
+else:
+	print('false')
+a4:
+n=int(input())
+esum = 0
+osum = 0
+while n > 0:
+    r = n % 10
+    if r % 2 == 0:
+        esum = esum + r
+    else:
+        osum = osum + r
+    n = n // 10
+print(esum, " ", osum)
+a5:
+n=int(input())
+fib1=1
+fib2=1
+fib3=0
+i=3
+if n==1:
+    print(fib1)
+elif n==2:
+    print(fib2)
+else:
+    while i<=n:
+        fib3 = fib2 + fib1
+        fib1=fib2
+        fib2=fib3
+        i=i+1
+    print(fib3)
+***********
+Patterns1:
+q1:
+n=int(input())
+i=1
+while(i<=n):
+    j=1
+    while(j<=n):
+        print(n,end='')
+        j = j+1
+    print()
+    i = i+1
+q2:
+n=int(input())
+i=1
+while(i<=n):
+    j=1
+    while(j<=i):
+        print('*',end='')
+        j = j+1
+    print()
+    i = i+1
+q3:
+n=int(input())
+i=1
+while(i<=n):
+    j=1
+    while(j<=i):
+        print(i,end='')
+        j = j+1
+    print()
+    i = i+1
+q4:
+n=int(input())
+i=1
+while(i<=n):
+    j=1
+    p=i
+    while(j<=i):
+        print(p,end='')
+        j = j+1
+        p = p-1
+    print()
+    i = i+1
+
+q5:
+n=int(input())
+i=1
+while(i<=n):
+    j=1
+    p=chr(ord('A')+i-1)
+    while(j<=i):
+        charp = chr(ord(p)+j-1)
+        print(charp,end='')
+        j = j+1     
+    print()
+    i = i+1
+q6:
+n=int(input())
+i=1
+while(i<=n):
+    j=1
+    p=chr(ord('A')+n-i)
+    while(j<=i):
+        charp = chr(ord(p)+j-1)
+        print(charp,end='')
+        j = j+1     
+    print()
+    i = i+1
+a1:
+n=int(input())
+i=1
+while(i<=n):
+    j=1
+    while(j<=i):
+        print(1,end='')
+        j = j+1
+    print()
+    i = i+1
+a2:
+n = int(input())
+if n == 1:
+    print(1)
+elif n > 1:
+    print(1)
+    i = 2    
+    while i <= n:
+        j = i-1
+        print(j,end='')
+        k=1
+        while k<j:
+            print(0,end='')
+            k=k+1
+        print(j)           
+        i = i+1
+a3:
+n = int(input())
+if n == 1:
+    print(1)
+elif n > 1:
+    print(1)
+    i = 2    
+    while i <= n:
+        j = i-1
+        print(1,end='')
+        k=1
+        while k<j:
+            print(2,end='')
+            k=k+1
+        print(1)           
+        i = i+1
+a4:
+n=int(input())
+i = n
+while i>=1:
+    j = 1
+    while j <= i:
+        print(j,end='')
+        j=j+1
+    print()
+    i=i-1
+a5:
+n=int(input())
+i = 1
+while i<=n:
+    charp = chr(ord('A')+i-1)
+    j = 1
+    while j<=i:
+        print(charp,end='')
+        j=j+1
+    print()
+    i = i+1
+**************
+patterns 2:
+***********
+q1:
+n=int(input())
+i=n
+while i>=1:
+    j = i
+    while j >= 1:
+        print(i,end='')
+        j=j-1
+    print()
+    i=i-1
+q2:
+n=int(input())
+i=1
+while i<=n:
+    spaces = 1
+    while spaces <= n-i:
+        print(' ',end='')
+        spaces = spaces + 1
+    nump = 1
+    while nump <= i:
+        print(nump,end='')
+        nump = nump + 1
+    print()
+    i = i+1
+q3:
+n=int(input())
+i=1
+while i<=n:
+    #printing spaces
+    spaces = 1
+    while spaces <= n-i:
+        print(' ',end='')
+        spaces = spaces + 1
+    #increasing sequence
+    stars = 1
+    while stars <= i:
+        print('*',end='')
+        stars = stars + 1
+    #decreasing sequence
+    stars = i-1
+    while stars >= 1:
+        print('*',end='')
+        stars = stars - 1
+    print()
+    i=i+1
+q4:
+n=int(input())
+i=1
+while i<=n:
+    spaces = 1
+    while spaces <= n-i:
+        print(' ',end='')
+        spaces = spaces+1
+    j = 1
+    p = i
+    while j<=i:
+        print(p,end='')
+        p=p+1
+        j=j+1
+    j = i-1
+    p = p-2
+    while j>=1:
+        print(p,end='')
+        p=p-1
+        j=j-1
+    print()
+    i=i+1
+q5:
+N=int(input())
+n = (N//2)+1
+i = 1
+while i <= n:
+    spaces = 1
+    while spaces <= n-i:
+        print(' ',end='')
+        spaces = spaces+1
+    starp = 1
+    while starp <= i:
+        print('*',end='')
+        starp = starp+1
+    starp = i-1
+    while starp >= 1:
+        print('*',end='')
+        starp=starp-1
+    print()
+    i=i+1
+i = n-1
+rspaces = 1
+while i >= 1:
+    r_spaces = 1
+    while r_spaces<=rspaces:
+        print(' ',end='')
+        r_spaces = r_spaces+1
+    r_starp = i
+    while r_starp >= 1:
+        print('*',end='')
+        r_starp = r_starp - 1
+    r_starp = i-1
+    while r_starp >= 1:
+        print('*',end='')
+        r_starp = r_starp - 1
+    print()
+    i=i-1
+    rspaces = rspaces + 1
+a1:
+n = int(input())
+i = 1
+while i<=n:
+    j=1
+    while j<=i:
+        print(j,end='')
+        j=j+1
+    space=1
+    while space <= n-i:
+        print('  ',end='')
+        space = space + 1
+    k=j-1
+    while k>=1:
+        print(k,end='')
+        k=k-1
+    print()
+    i=i+1
+a2:
+n=int(input())
+i=1
+while i<=n:
+    j=1
+    while j<=n:
+        if(i==j):
+            print('*',end='')
+        else:
+            print(0,end='')
+        j=j+1
+    print('*',end='')
+    j=1
+    while j<=n:
+        if(j==(n-i+1)):
+            print('*',end='')
+        else:
+            print(0,end='')
+        j=j+1
+    print()
+    i=i+1
+a3:
+n=int(input())
+i=1
+while i<=n:
+    space=1
+    while space<=n-i:
+        print(' ',end='')
+        space = space + 1
+    j=i
+    while j>=1:
+        print(j,end='')
+        j=j-1
+    j=j+2
+    while j<=i:
+        print(j,end='')
+        j=j+1
+    print()
+    i=i+1
+a4:
+N=int(input())
+n=(N//2)+1
+i=1
+while i<=n:
+    space=1
+    while space<=i-1:
+        print(' ',end='')
+        space=space+1
+    starp = 1
+    while starp <= i:
+        print('* ',end='')
+        starp=starp+1
+    print()
+    i=i+1
+i=n-1
+while i>=1:
+    space=i
+    while space>1:
+        print(' ',end='')
+        space=space-1
+    starp = i
+    while starp>=1:
+        print('* ',end='')
+        starp=starp-1
+    print()
+    i=i-1   
+**************
+More on Loops:
+***********
+a1:
+n=int(input())
+flag=True
+for i in range(n,0,-1):
+    if flag:
+        for j in range(1,i+1):
+            print(1,end='')
+        flag=False
+    else:
+        for j in range(1,i+1):
+            print(0,end='')
+        flag=True
+    print()
+a2:
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,i):
+        print(' ',end='')
+    for k in range(i,n+1):
+        print(k,end='')
+    print()
+for i in range(n-1,0,-1):
+    for j in range(1,i):
+        print(' ',end='')
+    for k in range(i,n+1):
+        print(k,end='')
+    print()
+a3:
+N=int(input())
+n=(N//2)+1
+for i in range(1,n+1):
+    for space in range(1,n-i+1):
+        print(' ',end='')
+    for j in range(1,i+1):
+        print('*',end='')
+    for j in range(1,i):
+        print('*',end='')
+    print()
+n1 = n-1
+for i in range(n1,0,-1):
+    for space in range(n-i):
+        print(' ',end='')
+    for j in range(1,i+1):
+        print('*',end='')
+    for j in range(1,i):
+        print('*',end='')
+    print()
+a4:
+n=int(input())
+for i in range(n,0,-1):
+    for j in range(n,i-1,-1):
+        print(j,end='')
+    for j in range(1,(i*2)-1):
+        print(i,end='')
+    for j in range(i+1,n+1):
+        print(j,end='')
+    print()
+for i in range(2,n+1):
+    for j in range(n,i-1,-1):
+        print(j,end='')
+    for j in range(1,(i*2)-1):
+        print(i,end='')
+    for j in range(i+1,n+1):
+        print(j,end='')
+    print()
+a5:
+n = int(input())
+if n%2 == 1:
+    for i in range(n//2+1):
+       for j in range(1,n+1):
+           print(n*2*i + j ,end = " ");
+       print()
+    for i in range(n//2,0,-1):
+       for j in range(1,n+1):
+           print(n*(2*i-1) + j , end = " ")
+       print()
+elif n%2 == 0:
+    for i in range(n//2):
+       for j in range(1,n+1):
+           print(n*2*i + j ,end = " ");
+       print()
+    for i in range(n//2,0,-1):
+       for j in range(1,n+1):
+           print(n*(2*i-1) + j , end = " ")
+       print()
+*****************
+Functions
+************
+a1:
+def printTable(start,end,step):
+    for i in range(start,end,step):
+        j=int((i-32)*(5/9))
+        print(i,j,sep='\t')
+
+	   
+s = int(input())
+e = int(input())
+step = int(input())
+printTable(s,e,step)
+
+a2:
+def checkMember(n):
+    fib0=0
+    fib1=1
+    if n==fib0 or n==fib1:
+        return True
+    while(True):
+        fib2 = fib0+fib1
+        if fib2 == n:
+            return True
+        if fib2 > n:
+            return False
+        fib0=fib1
+        fib1=fib2
+
+n=int(input())
+if(checkMember(n)):
+    print("true")
+else:
+    print("false")
+
+a3:
+def checkPalindrome(num):
+    n1=num
+    nr=0
+    while num>0:
+        nr = nr*10 + num%10
+        num = num // 10
+    if nr == n1:
+        return True
+    else:
+        return False
+		
+num = int(input())
+isPalindrome = checkPalindrome(num)
+if(isPalindrome):
+	print('true')
+else:
+	print('false')
+
+a4:
+n=int(input())
+count=0
+n1 = n
+while n1>0:
+    count=count+1
+    n1=n1//10
+n2 = n
+sum=0
+while n2>0:
+    sum=sum+(n2%10)**count
+    n2=n2//10
+if sum == n:
+    print("true")
+else:
+    print("false")
+
+**************
+Lists:
+**********
+q1:
+n=int(input())
+li=list(map(int,input().split()))
+sum=0
+for ele in li:
+    sum=sum+ele
+print(sum)
+
+q2:
+#Taking Input Using Fast I/O
+def takeInput() :
+    n = int(stdin.readline().rstrip())
+
+    if n == 0 :
+        return list(), 0
+
+    arr = list(map(int, stdin.readline().rstrip().split(" ")))
+    return arr, n
+
+
+#Printing the array/list
+def printList(arr, n) :
+    for i in range(n) :
+        print(arr[i], end = " ")
+    print()
+
+
+#main
+t = int(stdin.readline().rstrip())
+
+while t > 0 :
+    arr, n = takeInput()
+    if n != 0 :
+        swapAlternate(arr, n)
+        printList(arr, n)
+    t -= 1
+---------------------
+q2:
+from sys import stdin
+
+def swapAlternate(arr, n):
+    if n%2 != 0:
+        n=n-2
+    else:
+        n=n-1
+    while n>=0:
+        arr[n],arr[n-1]=arr[n-1],arr[n]
+        n = n-2
+    for i in arr:
+        print(i,end=' ')
+    #Your code goes here
+no_cases=int(input())
+while no_cases >= 1:
+    len = int(input())
+    li = [int(x) for x in input().split()]
+    swapAlternate(li,len)
+    print()
+    no_cases -= 1
+a1:
+def findUnique(arr, n) :
+    for i in arr:
+        if arr.count(i) == 1:
+            break
+    return i
+a2:
+def duplicateNumber(arr, n) :
+    for i in arr:
+        if arr.count(i) == 2:
+            break
+    return i
+a3:
+def intersections(arr1, n, arr2, m) :
+    for i in arr1:
+        if arr2.count(i)>=1:
+            print(i,end=' ')
+            arr2.remove(i)
+a4:
+def pairSum(arr, n, x) :
+    count=0
+    for i in range(n):
+        for j in range(i+1,n):
+            if (arr[i]+arr[j])==x:
+                count+=1
+    return count
+a5:
+from sys import stdin
+
+def findTriplet(arr, n, x) :
+    count=0
+    for i in range(n):
+        for j in range(i+1,n):
+            for k in range(j+1,n):
+                if arr[i]+arr[j]+arr[k] == x:
+                    count+=1
+    return count
+    #Your code goes here
+    #return your answer
+
+
+#Taking Input Using Fast I/O
+def takeInput() :
+    n = int(stdin.readline().strip())
+
+    if n == 0 :
+        return list(), 0
+
+    arr = list(map(int, stdin.readline().strip().split(" ")))
+    return arr, n
+
+
+
+#main
+t = int(stdin.readline().strip())
+
+while t > 0 :
+
+    arr, n = takeInput()
+    x = int(stdin.readline().strip())
+    print(findTriplet(arr, n, x))
+    t -= 1
+a6:
+def sortZeroesAndOne(arr, n) :
+    count=arr.count(0)
+    for i in range(n):
+        if i<count:
+            arr[i]=0
+        else:
+            arr[i]=1
+************************
+Searching & sorting
+**********************
+q1:
+def binarySearch(arr, n, x) :
+    s=0
+    e=n-1
+    while s<=e:
+        mid = (s+e)//2
+        if arr[mid]==x:
+            return mid
+        elif arr[mid] < x:
+            s = mid+1
+        elif arr[mid] > x:
+            e = mid-1
+    return -1
+q2:
+def bubbleSort(arr, n) :
+    for i in range(n):
+        for j in range(n-i-1):
+            if(arr[j]>arr[j+1]):
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+q3:
+def insertionSort(arr, n) :
+    for i in range(1,n):
+        for j in range(i,0,-1):
+            if(arr[j]<arr[j-1]):
+                arr[j-1],arr[j]=arr[j],arr[j-1]
+q4:
+def merge(arr1, n, arr2, m) :
+    arr3=[]
+    i=j=0;
+    while i<n and j<m:
+        if(arr1[i]<arr2[j]):
+            arr3.append(arr1[i])
+            i=i+1
+        else:
+            arr3.append(arr2[j])
+            j=j+1
+    if i == n:
+        while j<m:
+            arr3.append(arr2[j])
+            j=j+1
+    elif j == m:
+        while i<n:
+            arr3.append(arr1[i])
+            i=i+1
+    return arr3
+a1:
+def pushZerosAtEnd(arr, n) :
+    k=0
+    i=0
+    while i<n:
+        if(arr[i]!=0):
+            arr[k],arr[i]=arr[i],arr[k]
+            i=i+1
+            k=k+1
+        else:
+            i=i+1
+a2:
+def rotate(arr, n, d):
+    arr1=arr[::]
+    for i in range(n):
+        arr[i]=arr1[(i+d)%n]
+a3:
+def secondLargestElement(arr, n):
+    if n<=1 or arr.count(arr[0])==n:
+        return -2147483648
+    #arr=list(set(arr))
+    arr.sort()
+    for i in range(n-1,0,-1):
+        if arr[i]!=arr[i-1]:
+            return arr[i-1]
+a4:
+def arrayRotateCheck(arr, n):
+    i=0
+    if n==0 or n==1:
+        return 0
+    
+    while i<n-1:
+        if arr[i+1]>arr[i]:
+            i=i+1
+        else:
+            break
+        
+    if i==n-1:
+        return 0
+    else:
+        return i+1
+a5:
+def sort012(arr, n) :
+    lo=0
+    mid=0
+    hi=n-1
+    while mid <= hi:
+        if arr[mid] == 0:
+            arr[lo], arr[mid] = arr[mid], arr[lo]
+            lo = lo + 1
+            mid = mid + 1
+        elif arr[mid] == 1:
+            mid = mid + 1
+        else:
+            arr[mid], arr[hi] = arr[hi], arr[mid]
+            hi = hi - 1
+    return arr
+a6:
+def sumOfTwoArrays(arr1, n, arr2, m, output):    
+    if n<m:
+        while n<m:
+            arr1.insert(0,0)
+            n=n+1
+    elif m<n:
+        while m<n:
+            arr2.insert(0,0)
+            m=m+1
+    inc = 0
+    for i in range(n-1,-1,-1):
+        sum = arr1[i]+arr2[i]+inc
+        if sum > 9:
+            rem = sum % 10
+            output[i]=rem
+            inc = sum // 10
+        elif sum <=9:
+            output[i]=sum
+            inc = 0
+    output.insert(0,inc)
+**************
+strings:
+************
+q1:
+def isPalindrome(string) :
+    flag = True
+    n=len(string)
+    for i in range(0,n):
+        if string[i]==string[n-i-1]:
+            flag = True
+        else:
+            flag = False
+            break
+    if flag is False:
+        return False
+    else:
+        return True
+a1:
+def isPermutation(string1, string2) :
+    len1 = len(string1)
+    len2 = len(string2)
+    if len1 != len2:
+        return False
+    ss1 = sorted(string1)
+    ss2 = sorted(string2)
+    if ss1 == ss2:
+        return True
+    else:
+        return False
+a2:
+def removeConsecutiveDuplicates(string) :
+    ans = []
+    for c in string:
+        if len(ans) == 0 or c != ans[-1]:
+            ans.append(c)
+    return "".join(ans)
+a3:
+def reverseEachWord(string) :
+    li = string.split()
+    for i in range(len(li)):
+        li[i]=li[i][::-1]
+    return " ".join(li)
+a4:
+def removeAllOccurrencesOfChar(string, ch) :
+    li=[]
+    for i in string:
+        if i != ch:
+            li.append(i)
+    return "".join(li)
+a5:
+def highestOccuringChar(string) :
+    in_chr = []
+    in_chr_cnt = []
+    for i in string:
+        if i not in in_chr:
+            in_chr.append(i)
+            in_chr_cnt.append(1)
+        else:
+            loc = in_chr.index(i)
+            in_chr_cnt[loc] = in_chr_cnt[loc] + 1
+    return in_chr[in_chr_cnt.index(max(in_chr_cnt))]
+a6:
+def getCompressedString(input) :
+    chr = []
+    chr_cnt = []
+    n = len(input)
+    if n<1:
+        return Null
+    chr.append(input[0])
+    chr_cnt.append(1)
+    for i in input[1:]:
+        if i==chr[-1]:
+            chr_cnt[-1]=chr_cnt[-1]+1
+        else:
+            chr.append(i)
+            chr_cnt.append(1)
+    outString=""
+    for i in range(len(chr_cnt)):
+        if chr_cnt[i]==1:
+            outString = outString + chr[i]
+        else:
+            outString = outString + chr[i]+str(chr_cnt[i])
+    return outString
+************
