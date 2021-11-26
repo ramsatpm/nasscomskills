@@ -1,0 +1,154 @@
+python introduction:
+********************
+Find average marks:
+t1=int(input())
+t2=int(input())
+t3=int(input())
+avg=(t1+t2+t3)/3
+print(avg)
+
+Find X raised to power N:
+X = int(input())
+N = int(input())
+print(X**N)
+
+Arithmetic Progression:
+a=int(input())
+b=int(input())
+c=int(input())
+print(b-a)
+
+Rectangular Area:
+x1=int(input())
+y1=int(input())
+x2=int(input())
+y2=int(input())
+area=(x2-x1)*(y2-y1)
+print(area)
+
+Conditionals and Loops:
+**********************
+
+Check number:
+n=int(input())
+if n > 0:
+    print("Positive")
+elif n < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+Sum of n numbers:
+n = int(input())
+sum = 0
+i = 1
+while(i<=n):
+    sum = sum + i
+    i = i + 1
+print(sum)
+
+Sum of Even Numbers:
+n = int(input())
+sum = 0
+i = 2
+while(i<=n):
+    sum = sum + i
+    i = i + 2
+print(sum)
+
+Fahrenheit to Celsius:
+S = int(input())
+E = int(input())
+W = int(input())
+i = S
+while(i<=E):
+    cel = int((i-32)*5/9)
+    print(i,cel,sep="\t")
+    i = i + W
+
+Calculator:
+while True:
+    n = int(input())
+    if n==1:
+        i=int(input())
+        j=int(input())
+        print((i+j))
+    elif n == 2:
+        i = int(input())
+        j = int(input())
+        print((i-j))
+    elif n == 3:
+        i = int(input())
+        j = int(input())
+        print((i*j))
+    elif n == 4:
+        i = int(input())
+        j = int(input())
+        print((i//j))
+    elif n == 5:
+        i = int(input())
+        j = int(input())
+        print((i%j))
+    elif n==6:
+        break
+    else:
+        print("Invalid Operation")
+
+Reverse of a number:
+n = int(input())
+rev = 0
+while n>0:
+    rev = rev * 10 + n % 10
+    n = n//10
+print(rev)
+
+Palindrome number:
+def checkPalindrome(num):
+    rev = 0
+    numc = num
+    while num > 0:
+        rev = rev * 10 + num % 10
+        num = num // 10
+    if numc == rev:
+        return True
+    else:
+        return False
+
+		
+num = int(input())
+isPalindrome = checkPalindrome(num)
+if(isPalindrome):
+	print('true')
+else:
+	print('false')
+
+Sum of even & odd:
+n=int(input())
+esum = 0
+osum = 0
+while n > 0:
+    r = n % 10
+    if r % 2 == 0:
+        esum = esum + r
+    else:
+        osum = osum + r
+    n = n // 10
+print(esum, " ", osum)
+
+Nth Fibonacci Number:
+n=int(input())
+fib1=1
+fib2=1
+fib3=0
+i=3
+if n==1:
+    print(fib1)
+elif n==2:
+    print(fib2)
+else:
+    while i<=n:
+        fib3 = fib2 + fib1
+        fib1=fib2
+        fib2=fib3
+        i=i+1
+    print(fib3)
